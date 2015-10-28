@@ -301,7 +301,7 @@ We refer to the matched text with "\1", "\2", etc.
 
 So the expression
 
-** +([a-zA-Z]+) +\1 +** **means, match a "space", followed by at least one character, followed by at 
+**+([a-zA-Z]+) +\1 +** **means, match a "space", followed by at least one character, followed by at 
 least one "space", followed by the same pattern we matched before, followed by a "space"**
 
 will match the lines
