@@ -20,7 +20,7 @@ Source: https://www.coursera.org/course/getdata
 ```
 We need a way to express
 
-whitespace word boundaries
+white space word boundaries
 sets of literals
 the beginning and end of a line
 alternatives ("war" or "peace") Metacharacters to the rescue!
@@ -36,15 +36,15 @@ alternatives ("war" or "peace") Metacharacters to the rescue!
 
 **^i think** **means, match any line beginning with "i think"**
 
-```
+
 will match the lines
 
-**i think** we all rule for participating
-**i think** i have been outed
-i think this will be quite fun actually
-i think i need to go to work
-i think i first saw zombo in 1999.
-```
+- **i think** we all rule for participating
+- **i think** i have been outed
+- **i think** this will be quite fun actually
+- **i think** i need to go to work
+- **i think** i first saw zombo in 1999.
+
 
 #### $ represents the end of a line
 
