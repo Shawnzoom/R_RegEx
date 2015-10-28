@@ -6,8 +6,10 @@ output: html_document
 ---
 
 ```
-R Markdown format of slides from the Coursera Data Science Specialization course. RegEx lectures
-https://www.coursera.org/course/getdata
+R Markdown format of slides from the Coursera Data Science Specialization course. 
+RegEx lectures
+
+Source: https://www.coursera.org/course/getdata
 ```
 
 
@@ -72,7 +74,8 @@ I'm listening to Bush - Hurricane (Album Version)
 
 #### Character Classes with []
 
-**\^[Ii] am** **maens, match "I am or i am" at thebeginning of line, lowercase i, or uppercase I**
+**\^[Ii] am** **maens, match "I am or i am" at thebeginning of line, lowercase i,
+ or uppercase I**
 ```
 will match
 
@@ -89,9 +92,11 @@ I am so over this. I need food. Mmmm bacon...
 ```
 
 
-**Similarly, you can specify a range of letters [a-z] or [a-zA-Z]; notice that the order doesn't matter**
+**Similarly, you can specify a range of letters [a-z] or [a-zA-Z]; notice that the
+ order doesn't matter**
 
-**\^[0-9][a-zA-Z] match a number at the beginning of a line followed by either an uppercase or lowercase letter**
+**\^[0-9][a-zA-Z] match a number at the beginning of a line followed by either an
+ uppercase or lowercase letter**
 ```
 will match the lines
 
@@ -238,7 +243,8 @@ Mmmm its time 4 me 2 go 2 bed
 
 -m, means at least m matches
 
-**[Bb]ush( +[^ ]+ +){1,5} debate** **means, match "Bush/bush", followed by a "space", followed by something that is not a "space", followed by at least one "space", 1-5 times, followed by "debate"**
+**[Bb]ush( +[^ ]+ +){1,5} debate** **means, match "Bush/bush", followed by a "space", followed by something 
+that is not a "space", followed by at least one "space", 1-5 times, followed by "debate"**
 ```
 will match the lines
 
@@ -254,13 +260,15 @@ Keep repeating that Bush smirked and scowled during the debate
 
 #### More metacharacters: ( and ) revisited
 ```
-In most implementations of regular expressions, the parentheses not only limit the scope of alternatives divided by a "|", but also can be used to "remember" text matched by the subexpression enclosed
+In most implementations of regular expressions, the parentheses not only limit the scope of 
+alternatives divided by a "|", but also can be used to "remember" text matched by the subexpression enclosed
 
 We refer to the matched text with \\1, \\2, etc.
 ```
 So the expression
 
-** +([a-zA-Z]+) +\\1 +** **means, match a "space", followed by at least one character, followed by at leaset one "space", followed by the same pattern we matched before, followed by a "space"**
+** +([a-zA-Z]+) +\\1 +** **means, match a "space", followed by at least one character, followed by at 
+least one "space", followed by the same pattern we matched before, followed by a "space"**
 ```
 will match the lines
 
