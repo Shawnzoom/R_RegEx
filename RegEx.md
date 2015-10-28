@@ -55,12 +55,12 @@ will match the lines
 
 will match the lines
 
-well they had something this **morning**
-then had to catch a tram home in the **morning**
-dog obedience school in the **morning**
-and yes happy birthday i forgot to say it earlier this **morning**
-I walked in the rain this **morning**
-good **morning**
+- well they had something this **morning**
+- then had to catch a tram home in the **morning**
+- dog obedience school in the **morning**
+- and yes happy birthday i forgot to say it earlier this **morning**
+- I walked in the rain this **morning**
+- good **morning**
 
 
 
@@ -77,11 +77,11 @@ good **morning**
 will match the lines 
 
 
-The democrats are playing, "Name the worst thing about **Bush**!"
-I smelled the desert creosote **bush**, brownies, BBQ chicken
-BBQ and **bush**walking at Molonglo Gorge
-**Bush** TOLD you that North Korea is part of the Axis of Evil
-I'm listening to **Bush** - Hurricane (Album Version)
+- The democrats are playing, "Name the worst thing about **Bush**!"
+- I smelled the desert creosote **bush**, brownies, BBQ chicken
+- BBQ and **bush**walking at Molonglo Gorge
+- **Bush** TOLD you that North Korea is part of the Axis of Evil
+- I'm listening to **Bush** Hurricane (Album Version)
 
 
 #### Character Classes with []
