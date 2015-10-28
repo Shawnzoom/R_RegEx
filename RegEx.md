@@ -89,53 +89,46 @@ will match the lines
 ----------
 
 
-**\^[Ii] am** **maens, match "I am or i am" at thebeginning of line, lowercase i,
+**^[Ii] am** **means, match "I am or i am" at the beginning of line, lowercase i,
  or uppercase I**
-```
+
 will match
 
-i am so angry at my boyfriend i can't even bear to
-look at him
+- **i am** so angry at my boyfriend i can't even bear to look at him
+- **i am** boycotting the apple store
+- **I am** twittering from iPhone
+- **I am** a very vengeful person when you ruin my sweetheart.
+- **I am** so over this. I need food. Mmmm bacon...
 
-i am boycotting the apple store
-
-I am twittering from iPhone
-
-I am a very vengeful person when you ruin my sweetheart.
-
-I am so over this. I need food. Mmmm bacon...
-```
 
 
 **Similarly, you can specify a range of letters [a-z] or [a-zA-Z]; notice that the
  order doesn't matter**
 
-**\^[0-9][a-zA-Z] match a number at the beginning of a line followed by either an
+**^[0-9][a-zA-Z] match a number at the beginning of a line followed by either an
  uppercase or lowercase letter**
-```
+
 will match the lines
 
-7th inning stretch
-2nd half soon to begin. OSU did just win something
-3am - cant sleep - too hot still.. :(
-5ft 7 sent from heaven
-1st sign of starvagtion
-```
+- **7th** inning stretch
+- **2nd** half soon to begin. OSU did just win something
+- **3am** cant sleep too hot still.. :(
+- **5ft** 7 sent from heaven
+- **1st** sign of starvation
 
-
-
-**When used at the beginning of a character class, the "^" is also a metacharacter and indicates matching characters NOT in the indicated class**
+**When used at the beginning of a character class, the "^" is also a metacharacter 
+and indicates matching characters NOT in the indicated class**
 
 **[^?.]$ Match any at the end of the line that is not a '?' or a "."**
-```
+
 will match the lines
 
-i like basketballs
-6 and 9
-dont worry... we all die anyway!
-Not in Baghdad
-helicopter under water? hmmm
-```
+- i like basketball**s**
+- 6 and **9**
+- dont worry... we all die anyway**!**
+- Not in Baghda**d**
+- helicopter under water? hmm**m**
+
 
 
 ### More Metacharacters
