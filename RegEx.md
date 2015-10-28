@@ -14,6 +14,9 @@ Source: https://www.coursera.org/course/getdata
 
 
 #### Regular Expressions
+
+----------
+
 ```
 We need a way to express
 
@@ -26,6 +29,9 @@ alternatives ("war" or "peace") Metacharacters to the rescue!
 
 #### Metacharacters
 
+----------
+
+
 **Some metacharacters represent the start of a line**
 
 **^i think** **means, match any line beginning with "i think"**
@@ -33,14 +39,17 @@ alternatives ("war" or "peace") Metacharacters to the rescue!
 ```
 will match the lines
 
-i think we all rule for participating
-i think i have been outed
+**i think** we all rule for participating
+**i think** i have been outed
 i think this will be quite fun actually
 i think i need to go to work
 i think i first saw zombo in 1999.
 ```
 
 #### $ represents the end of a line
+
+----------
+
 
 **morning$** **"means, match any line ending with "morning""**
 ```
@@ -58,6 +67,9 @@ good morning
 
 #### Character Classes with []
 
+----------
+
+
 **We can list a set of characters we will accept at a given point in the match**
 
 **[Bb][Uu][Ss][Hh]** **means. match lowercase or uppercase letters**
@@ -73,6 +85,9 @@ I'm listening to Bush - Hurricane (Album Version)
 ```
 
 #### Character Classes with []
+
+----------
+
 
 **\^[Ii] am** **maens, match "I am or i am" at thebeginning of line, lowercase i,
  or uppercase I**
