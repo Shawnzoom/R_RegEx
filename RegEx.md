@@ -291,7 +291,7 @@ will match the lines
 
 
 
-#### More metacharacters: ( and ) revisited
+### More metacharacters: ( and ) revisited
 
 ----------
 In most implementations of regular expressions, the parentheses not only limit the scope of 
@@ -301,7 +301,7 @@ We refer to the matched text with "\1", "\2", etc.
 
 So the expression
 
-**+([a-zA-Z]+) +\1 +** **means, match a "space", followed by at least one character, followed by at 
+**"+([a-zA-Z]+) +\1 +"** **means, match a "space", followed by at least one character, followed by at 
 least one "space", followed by the same pattern we matched before, followed by a "space"**
 
 will match the lines
@@ -314,16 +314,16 @@ will match the lines
 - estudiando** css css **css css.... que desastritooooo
 
 
-#### The * is "greedy" so it always matches the longest possible string that satisfies the regular expression. 
+### The * is "greedy" so it always matches the longest possible string that satisfies the regular expression. 
 
 ----------
 
 
-**^s(.*)s** **means, match a lowercase "s" at the beginning, followed by some number of characters, followed by an lowercase "s" at the end**
+**"^s(.*)s"** **means, match a lowercase "s" at the beginning, followed by some number of characters, followed by an lowercase "s" at the end**
 
 The greediness of * can be turned off with the ?, as in
 
-**^s(.*?)s**
+**"^s(.*?)s"**
 matches
 
 - **sitting at s**tarbucks
@@ -334,7 +334,10 @@ matches
 - **sore** shoulders, stupid ergonomics
 
 
-#### Summary
+### Summary
+
+----------
+
 
 -Regular expressions are used in many different languages; not unique to R.
 
