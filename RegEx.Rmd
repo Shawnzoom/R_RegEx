@@ -11,16 +11,14 @@ https://www.coursera.org/course/getdata
 ```
 
 
-
+#### Regular Expressions
 ```
-Regular Expressions
-
 We need a way to express
 
-    whitespace word boundaries
-    sets of literals
-    the beginning and end of a line
-    alternatives ("war" or "peace") Metacharacters to the rescue!
+whitespace word boundaries
+sets of literals
+the beginning and end of a line
+alternatives ("war" or "peace") Metacharacters to the rescue!
 ```
 
 
