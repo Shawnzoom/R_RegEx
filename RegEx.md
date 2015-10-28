@@ -133,6 +133,9 @@ will match the lines
 
 ### More Metacharacters
 
+----------
+
+
 **"." is used to refer to any character. So**
 
 **9.11** **means, match 9 followed by\<any character\>follwed by 11**
@@ -147,103 +150,127 @@ Front Door 9:11:46 AM
 Sings: 0118999881999119725...3 !
 ```
 
-**\"\|" This does not mean "pipe" in the context of regular expressions; instead it translates to "or"; we can use it to combine two expressions, the subexpressions being called alternatives**
+**"|" This does not mean "pipe" in the context of regular expressions; instead it translates to "or"; we can use it to combine two expressions, the sub expressions being called alternatives**
 
 **flood|fire** **means. match "flood" or "fire"**
 
-```
+
 will match the lines
 
-is firewire like usb on none macs?
-the global flood makes sense within the context of the bible
-yeah ive had the fire on tonight
-... and the floods, hurricanes, killer heatwaves, rednecks, gun nuts, etc.
-```
+- is **fire**wire like usb on none macs?
+- the global **flood** makes sense within the context of the bible
+- yeah ive had the **fire** on tonight
+- ... and the **flood**s, hurricanes, killer heatwaves, rednecks, gun nuts, etc.
+
 
 
 #### We can include any number of alternatives...
 
+----------
+
+
 **flood|earthquake|hurricane|coldfire** **means, match any of those words**
 
-```
+
 will match the lines
 
-Not a whole lot of hurricanes in the Arctic.
-We do have earthquakes nearly every day somewhere in our State
-hurricanes swirl in the other direction
-coldfire is STRAIGHT!
-'cause we keep getting earthquakes
-```
+- Not a whole lot of **hurricane**s in the Arctic.
+- We do have **earthquake**s nearly every day somewhere in our State
+- **hurricane**s swirl in the other direction
+- **coldfire** is STRAIGHT!
+- `cause we keep getting **earthquake**s
+
 
 #### The alternatives can be real expressions and not just literals
 
-**\^[Gg]ood|[Bb]ad** **means, match at beginning of line "Good" or "good" or match "Bad" or "bad" anywhere**
+----------
 
-```
+
+**^[Gg]ood|[Bb]ad** **means, match at beginning of line "Good" or "good" or match "Bad" or "bad" anywhere**
+
+
 will match the lines
 
-good to hear some good knews from someone here
-Good afternoon fellow american infidels!
-good on you-what do you drive?
-Katie... guess they had bad experiences...
-my middle name is trouble, Miss Bad News
-```
+- **good** to hear some good knews from someone here
+- **Good** afternoon fellow american infidels!
+- **good** on you-what do you drive?
+- Katie... guess they had **bad **experiences...
+- my middle name is trouble, Miss **Bad** News
+
 
 
 #### Subexpressions are often contained in parentheses to constrain the alternatives
 
-**\^([Gg]ood|[Bb]ad)** **means, match at beginning of line,only, "Good" or "good" or match "Bad" or "bad"**
-```
+----------
+
+
+**^([Gg]ood|[Bb]ad)** **means, match at beginning of line,only, "Good" or "good" or match "Bad" or "bad"**
+
 will match the lines
 
-bad habbit
-bad coordination today
-good, becuase there is nothing worse than a man in kinky underwear
-Badcop, its because people want to use drugs
-Good Monday Holiday
-Good riddance to Limey
-```
+- **bad** habbit
+- **bad** coordination today
+- **good**, because there is nothing worse than a man in kinky underwear
+- **Bad**cop, its because people want to use drugs
+- **Good** Monday Holiday
+- **Good** riddance to Limey
+
 
 
 #### The question mark indicates that the indicated expression is optional
 
+----------
+
+
 **[Gg]eorge( [Ww]\.)? [Bb]ush** **means, match "George/george", optional match for "W./w." and match "Bush/bush"**
-```
+
 will match the lines
 
-i bet i can spell better than you and george bush combined
-BBC reported that President George W. Bush claimed God told him to invade I
-a bird in the hand is worth two george bushes
-```
+- i bet i can spell better than you and **george bush** combined
+- BBC reported that President **George W. Bush** claimed God told him to invade I
+- a bird in the hand is worth two **george bush**es
 
 
 
-#### The "*" and "+"" signs are metacharacters used to indicate repetition; * means "any number, including none, of the item" and + means "at least one of the item"**
+
+#### The "*" and "+"" signs are metacharacters used to indicate repetition
+
+----------
+
+ **+ means "at least one of the item"* and means * "any number, including none, of the item"**
 
 
-**(.\*)** **means, match parenthesies and any character in the parenthesies that appears zero or more times**
-```
+**\(.*\)** **:means, match parenthesis and any character in the parenthesis that appears zero or more times**
+
 will match the lines
 
-anyone wanna chat? (24, m, germany)
-hello, 20.m here... ( east area + drives + webcam )
-(he means older men)
-()
-```
+- anyone wanna chat? **(24, m, germany)**
+- hello, 20.m here... **( east area + drives + webcam )**
+- **(he means older men)**
+- **()**
 
-#### The * and + signs are metacharacters used to indicate repetition; * means "any number, including none, of the item" and + means "at least one of the item"
+#### The "*" and "+"" signs are metacharacters used to indicate repetition
 
-**[0-9]+ (.\*)[0-9]+** **means, match at least one digit "0-9" followed by any number of characters, followed by at least one digit "0 to 9"**
-```
+----------
+
+ **+ means "at least one of the item"* and means * "any number, including none, of the item"**
+
+
+**[0-9]+ (.*)[0-9]+** **means, match at least one digit "0-9" followed by any number of characters, followed by at least one digit "0 to 9"**
+
 will match the lines
 
-working as MP here 720 MP battallion, 42nd birgade
-so say 2 or 3 years at colleage and 4 at uni makes us 23 when and if we fin
-it went down on several occasions for like, 3 or 4 *days*
-Mmmm its time 4 me 2 go 2 bed
-```
+- working as MP here **720 MP battallion, 42**nd birgade
+- so say **2 or 3 years at colleage and 4** at uni makes us 23 when and if we fin
+- it went down on several occasions for like, **3 or 4** *days*
+- Mmmm its time **4 me 2 go 2** bed
 
-#### "{" and "}" are referred to as interval quantifiers; they let us specify the minimum and maximum number of matches of an expression
+
+#### "{" and "}" are referred to as interval quantifiers; 
+
+----------
+
+they let us specify the minimum and maximum number of matches of an expression
 
 -m,n means at least m but not more than n matches
 
@@ -251,63 +278,62 @@ Mmmm its time 4 me 2 go 2 bed
 
 -m, means at least m matches
 
-**[Bb]ush( +[^ ]+ +){1,5} debate** **means, match "Bush/bush", followed by a "space", followed by something 
-that is not a "space", followed by at least one "space", 1-5 times, followed by "debate"**
-```
+**[Bb]ush( +[^ ]+){1,5} debate} debate** **means, match "Bush/bush", followed by a "space", followed by something that is not a "space", followed by at least one "space", 1-5 times, followed by "debate"**
+
 will match the lines
 
-Bush has historically won all major debates he's done.
-in my view, Bush doesn't need these debates..
-bush doesn't need the debates? maybe you are right
-That's what Bush supporters are doing about the debate.
-Felix, I don't disagree that Bush was poorly prepared for the debate.
-indeed, but still, Bush should have taken the debate more seriously.
-Keep repeating that Bush smirked and scowled during the debate
-```
+- **Bush has historically won all major debate**s he's done.
+- in my view, **Bush doesn't need these debate**s..
+- **bush doesn't need the debate**s? maybe you are right
+- That's what **Bush supporters are doing about the debate**.
+- Felix, I don't disagree that **Bush was poorly prepared for the debate**.
+- indeed, but still, **Bush should have taken the debate** more seriously.
+- Keep repeating that **Bush smirked and scowled during the debate**
+
 
 
 #### More metacharacters: ( and ) revisited
-```
-In most implementations of regular expressions, the parentheses not only limit the scope of 
-alternatives divided by a "|", but also can be used to "remember" text matched by the subexpression enclosed
 
-We refer to the matched text with \\1, \\2, etc.
-```
+----------
+In most implementations of regular expressions, the parentheses not only limit the scope of 
+alternatives divided by a "|", but also can be used to "remember" text matched by the sub-expression enclosed
+
+We refer to the matched text with "\1", "\2", etc.
+
 So the expression
 
-** +([a-zA-Z]+) +\\1 +** **means, match a "space", followed by at least one character, followed by at 
+** +([a-zA-Z]+) +\1 +** **means, match a "space", followed by at least one character, followed by at 
 least one "space", followed by the same pattern we matched before, followed by a "space"**
-```
+
 will match the lines
 
-time for bed, night night twitter!
-blah blah blah blah
-my tattoo is so so itchy today
-i was standing all all alone against the world outside...
-hi anybody anybody at home
-estudiando css css css css.... que desastritooooo
-```
+time for bed,** night night **twitter!
+blah** blah blah **blah
+my tattoo is** so so **itchy today
+i was standing** all all **alone against the world outside...
+hi** anybody anybody **at home
+estudiando** css css **css css.... que desastritooooo
 
 
-#### The * is "greedy" so it always matches the longest possible string that satisfies the regular expression. So
 
-**\^s(.\*)s** **means, match a lowercase "s" at the beginning, followed by some number of characters, followed by an lowercase "s" at the end**
-```
+#### The * is "greedy" so it always matches the longest possible string that satisfies the regular expression. 
+
+----------
+
+
+**^s(.*)s** **means, match a lowercase "s" at the beginning, followed by some number of characters, followed by an lowercase "s" at the end**
+
+The greediness of * can be turned off with the ?, as in
+
+**^s(.*?)s**
 matches
 
-sitting at starbucks
-setting up mysql and rails
-studying stuff for the exams
-spaghetti with marshmallows
-stop fighting with crackers
-sore shoulders, stupid ergonomics
-```
-
-
-
-#### The greediness of * can be turned off with the ?, as in
-
-**\^s(.\*?)s$**
+- **sitting at s**tarbucks
+- **setting up mys**ql and rails
+- **studying s**tuff for the exams
+- **spaghetti with mar**shmallows
+- **stop fighting with crackers**
+- **sore** shoulders, stupid ergonomics
 
 
 #### Summary
