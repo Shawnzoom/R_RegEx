@@ -1,7 +1,6 @@
 ---
 title: "Regular Expressions"
 author: "Shawnzoom"
-date: "October 26, 2015"
 output: html_document
 ---
 
@@ -138,17 +137,17 @@ will match the lines
 
 **"." is used to refer to any character. So**
 
-**9.11** **means, match 9 followed by\<any character\>follwed by 11**
+**9.11** **means, match 9 followed by <any character>, followed by 11**
 
-```
+
 will match the lines
 
-its stupid the post 9-11 rules
-if any 1 of us did 9/11 we would have been caught in days.
-NetBios: scanning ip 203.169.114.66
-Front Door 9:11:46 AM
-Sings: 0118999881999119725...3 !
-```
+- its stupid the post **9-11** rules
+- if any 1 of us did **9/11** we would have been caught in days.
+- NetBios: scanning ip 203.16**9.11**4.66
+- Front Door **9:11**:46 AM
+- Sings: 01189998819**9911**9725...3 !
+
 
 **"|" This does not mean "pipe" in the context of regular expressions; instead it translates to "or"; we can use it to combine two expressions, the sub expressions being called alternatives**
 
@@ -307,13 +306,12 @@ least one "space", followed by the same pattern we matched before, followed by a
 
 will match the lines
 
-time for bed,** night night **twitter!
-blah** blah blah **blah
-my tattoo is** so so **itchy today
-i was standing** all all **alone against the world outside...
-hi** anybody anybody **at home
-estudiando** css css **css css.... que desastritooooo
-
+- time for bed,** night night **twitter!
+- blah** blah blah **blah
+- my tattoo is** so so **itchy today
+- i was standing** all all **alone against the world outside...
+- hi** anybody anybody **at home
+- estudiando** css css **css css.... que desastritooooo
 
 
 #### The * is "greedy" so it always matches the longest possible string that satisfies the regular expression. 
