@@ -303,12 +303,12 @@ least one "space", followed by the same pattern we matched before, followed by a
 
 will match the lines
 
-- time for bed, **night night**twitter!
-- blah **blah blah**blah
-- my tattoo is **so so** itchy today
-- i was standing **all all** alone against the world outside...
-- hi **anybody anybody** at home
-- estudiando **css css** css css.... que desastritooooo
+- time for bed, `night night` twitter!
+- blah `blah blah` blah
+- my tattoo is `so so` itchy today
+- i was standing `all all` alone against the world outside...
+- hi `anybody anybody` at home
+- estudiando `css css` css css.... que desastritooooo
 
 
 ### The * is "greedy" so it always matches the longest possible string that satisfies the regular expression. 
